@@ -74,8 +74,9 @@ body {
   font: {
     family: $ffamily;
     weight: normal;
-    size: 12px;
+    size: 18px;
   };
+  color: $main_color;
   line-height: 1.4;
   background: url(../img/top_bg.jpg) repeat-x top center, url(../img/pattern.jpg) repeat center;
 }
@@ -88,14 +89,22 @@ a{
   }
 }
 
-h1,h2,h3,h4,h5,h6{color:inherit;font-weight:normal;}
-h1{font-size:24px;}
-h2{font-size:22px;}
-h3{font-size:20px;}
-h4{font-size:18px;}
-h5{font-size:16px;}
-h6{font-size:14px;}
+h1,h2,h3,h4,h5,h6{color:inherit;font-weight:normal;font-family: $ffamily;padding-bottom: 20px;}
+h1{
+  @extend .title;
+  font-size: 71px;
+}
+h2{font-size:36px;}
+h3{font-size:30px;}
+h4{font-size:27px;}
+h5{font-size:25px;}
+h6{font-size:23px;}
 
+p{
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $fontfamily;
+}
 //buttons and inputs
 .button{
   @include button('');
@@ -103,7 +112,7 @@ h6{font-size:14px;}
     @include button_gradient_hover('');
   }
 }
-input[type=text], input[type=email], input[type=tel], input[type=search], input[type=password], input[type=date], input[type=url], textarea{
+input[type=text], select, input[type=email], input[type=tel], input[type=search], input[type=password], input[type=date], input[type=url], textarea{
    @include input('');
    &:focus{
      @include input_focus('');
