@@ -621,6 +621,11 @@
 		}
 	}
 
+	h1{
+	  @extend .title;
+	  font-size: 71px;
+	}
+
 }
 	.radio, .checkbox{
 		display: block;
